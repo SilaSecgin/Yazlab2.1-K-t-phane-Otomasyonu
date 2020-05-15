@@ -1,0 +1,39 @@
+SELECT book_id FROM books WHERE book_id LIKE '100'
+
+
+
+UPDATE books SET endDate = '2020-05-01 16:45:31' WHERE book_id = 15; 
+
+
+DELETE FROM books WHERE book_id='29';
+
+
+
+
+
+DELETE FROM users WHERE user_id='15';
+
+SELECT * FROM users;
+
+INSERT INTO books (bookName, bookIsbn) VALUES ('Gözlerin', 'S1LA');
+
+SELECT users.username, books.startDate FROM users INNER JOIN books ON users.user_id = books.user_id;
+
+SELECT * FROM books WHERE bookName LIKE 'emre' OR bookIsbn LIKE '1234' ;
+
+SELECT user_id FROM users WHERE username = "sila"  /// USERNAME GÖRE USER İD BUL
+
+SELECT * FROM books WHERE bookIsbn LIKE '123' AND user_id LIKE '1' ; /// USER İD VE BOOKISBN E GÖRE KİTAP ARA
+
+UPDATE books SET endDate = null WHERE bookIsbn LIKE '123' AND user_id LIKE '1'; /// USER İD VE BOOK İSBN VARSA endDate = null
+
+UPDATE books SET startDate = null WHERE bookIsbn LIKE '123' AND user_id LIKE '1'; /// USER İD VE BOOK İSBN VARSA startDate = null
+
+SELECT * FROM books WHERE book_id LIKE '1' AND user_id IS NULL; /// Kitap id si 1 ve kitabı kimse almadıysa.
+
+SELECT COUNT(book_id) FROM books WHERE user_id = "1";  /// userId si üzerinde kaç kitap var ? 
+
+SELECT endDate FROM books WHERE user_id LIKE '1' order by endDate ASC LIMIT 1 ; /// id si bir olan kullanıcının endDate i en yakın o
+
+Sql Error 1175 -->> SET SQL_SAFE_UPDATES = 0;
+:**

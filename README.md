@@ -1,1 +1,1 @@
-# Yazlab2.1-K-t-phane-Otomasyonu
+# Yazlab2.1-Kutuphane-Otomasyonu
